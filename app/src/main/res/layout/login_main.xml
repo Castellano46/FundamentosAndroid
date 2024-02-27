@@ -27,11 +27,11 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="20dp"
         android:alpha="0.7"
-        android:background="@color/white"
+        android:background="@drawable/edittext_custom"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:padding="16dp"
-        android:textSize="20sp" />
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/editTextTextPassword2"
@@ -41,7 +41,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
+        android:background="@drawable/edittext_custom"
         android:alpha="0.7"
         android:textSize="20sp"
         android:padding="16dp"
