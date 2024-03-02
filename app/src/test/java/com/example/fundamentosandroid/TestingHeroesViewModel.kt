@@ -17,7 +17,6 @@ class TestingHeroesViewModel {
     private val viewModel = HeroesViewModel()
     private var hero = Hero("Goku", "description", true, "", "1234",100,100)
 
-    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `check heroes download`() = runTest {
         launch {

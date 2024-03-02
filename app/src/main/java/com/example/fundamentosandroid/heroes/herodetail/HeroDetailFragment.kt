@@ -1,5 +1,6 @@
 package com.example.fundamentosandroid.heroes.herodetail
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -44,6 +45,7 @@ class HeroDetailFragment(val callback: Clicked) : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun configureHero(hero: Hero){
         binding.tvName.text = hero.name
         binding.progressBar3.progress = hero.hitPoints

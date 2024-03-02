@@ -26,9 +26,6 @@ class HeroesViewModel: ViewModel() {
         if (list.isEmpty()){
             downloadHeroes()
         }
-        else{
-
-        }
     }
 
     fun configureDetails (hero: Hero){
@@ -94,7 +91,6 @@ class HeroesViewModel: ViewModel() {
             } ?: run { _uiState.value = UiState.Error("Something went wrong in the request") }
         }
     }
-
 
     sealed class UiState {
         object Idle : UiState()
