@@ -20,7 +20,7 @@ class HeroesListAdapter(
 
     class HeroesListViewHolder(private var item: HeroItem2Binding, private val callback: HeroClicked) : RecyclerView.ViewHolder(item.root) {
 
-        fun showHero(hero: Hero, par: Boolean) {
+        fun showHero(hero: Hero) {
             item.heroTitle.text = hero.name
             item.heroDescription.text = hero.description
             Picasso.get().load(hero.photo).into(item.featuredImage)
@@ -59,6 +59,6 @@ class HeroesListAdapter(
     }
 
     override fun onBindViewHolder(holder: HeroesListViewHolder, position: Int) {
-        holder.showHero(heroesList[position], position % 2 == 0)
+        holder.showHero(heroesList[position])
     }
 }

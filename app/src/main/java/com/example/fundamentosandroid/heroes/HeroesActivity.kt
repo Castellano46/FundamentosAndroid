@@ -1,11 +1,9 @@
 package com.example.fundamentosandroid.heroes
 
 import android.content.Context
-import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.fundamentosandroid.databinding.ActivityHeroesBinding
@@ -54,7 +52,7 @@ class HeroesActivity : AppCompatActivity(), Clicked {
     private fun loadRecyclerView() {
         supportFragmentManager
             .beginTransaction()
-            .replace(binding.fFragment.id, ListHeroesFragment(this))
+            .replace(binding.fFragment.id, ListHeroesFragment())
             .commitNow()
     }
 

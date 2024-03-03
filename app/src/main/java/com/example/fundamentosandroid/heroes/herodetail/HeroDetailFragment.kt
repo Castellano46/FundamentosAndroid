@@ -14,7 +14,7 @@ import com.example.fundamentosandroid.heroes.HeroesViewModel
 import com.squareup.picasso.Picasso
 
 
-class HeroDetailFragment(val callback: Clicked) : Fragment() {
+class HeroDetailFragment(private val callback: Clicked) : Fragment() {
 
     private lateinit var binding: FragmentHeroDetailBinding
     private val viewModel: HeroesViewModel by activityViewModels()

@@ -49,7 +49,7 @@ class HeroesViewModel: ViewModel() {
     }
 
     fun damagedHero(){
-        val num = Random.nextInt(10, 60,)
+        val num = Random.nextInt(10, 60)
         hero.hitPoints -= num
         if (hero.hitPoints <= 0) {
             hero.hitPoints = 0
@@ -79,7 +79,7 @@ class HeroesViewModel: ViewModel() {
                     val heroDtoArray = gson.fromJson(responseBody.string(), Array<HeroDTO>::class.java)
                     if(list.isEmpty()){
                         list = heroDtoArray.toList()
-                            .map { Hero(it.name, it.description, it.favorite, it.photo, it.id,) }
+                            .map { Hero(it.name, it.description, it.favorite, it.photo, it.id) }
                         _uiState.value = UiState.OnHeroesReceived(list)
                     }
                     else{

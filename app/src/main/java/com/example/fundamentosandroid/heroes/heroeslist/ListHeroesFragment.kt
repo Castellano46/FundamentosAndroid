@@ -17,7 +17,7 @@ interface Clicked {
     fun onClick()
     fun goBack()
 }
-class ListHeroesFragment(val callback: Clicked): Fragment(), HeroClicked {
+class ListHeroesFragment : Fragment(), HeroClicked {
 
     private lateinit var binding: FragmentListHeroesBinding
     private val viewModel: HeroesViewModel by activityViewModels()
